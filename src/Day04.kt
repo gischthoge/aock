@@ -19,8 +19,9 @@ fun main() {
                     val (from, to) = range.split("-").map { it.toInt() }
                     from..to
                 }
-        }.filter { (first, second) -> first.intersect(second).isNotEmpty() }
-            .size
+        }.filter { (first, second) ->
+            first.intersect(second).isNotEmpty()
+        }.size
     }
 
     val input = readInput("Day04")
